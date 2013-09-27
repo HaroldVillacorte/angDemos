@@ -1,0 +1,15 @@
+<h2>Header Controller</h2>
+<p class="panel callout">Shows ng-class directive.</p>
+<div ng-controller="HeaderController">
+    <style type="text/css" scoped>
+        .error {
+            background-color: yellow;
+        }
+        .warning {
+            background-color: red;
+        }
+    </style>
+    <div ng-class="{error: isError, warning: isWarning}">{{messageText}}</div>
+    <button ng-click="showError()">Show error</button>
+    <button ng-click="showWarning()">Show Warning</button>
+</div>

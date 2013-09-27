@@ -1,0 +1,23 @@
+<h2>Restaurant Table Controller</h2>
+<p class="panel callout">Shows $index method directive.</p>
+<div ng-controller="RestaurantTableController">
+    <style type="text/css" scoped>
+        .selected {
+            background-color: lightgreen;
+        }
+    </style>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Cuisine</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="restaurant in directory" ng-click="selectRestaurant($index)">
+                <td ng-class="{selected: $index == selectedRow}">{{restaurant.name}}</td>
+                <td ng-class="{selected: $index == selectedRow}">{{restaurant.cuisine}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

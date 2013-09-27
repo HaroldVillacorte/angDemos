@@ -1,0 +1,17 @@
+<h2>Cart Controller</h2>
+<p class="panel callout">
+    Shows watch method.
+</p>
+<div ng-controller="CartController">
+    <div ng-repeat="item in items">
+        <span>{{item.title}}</span>
+        <input type="range" ng-model="item.quantity">
+        <span>Price: {{item.price| currency}}</span>
+        <span>Quantity: {{item.quantity}}</span>
+        <span>Total: {{item.price * item.quantity| currency}}</span>
+        <button ng-click="remove($index)">Remove</button>
+    </div>
+    <div>Total: {{billing.total| currency}}</div>
+    <div>Discount: {{billing.discount| currency}}</div>
+    <div>Subtotal: {{billing.subtotal| currency}}</div>
+</div>

@@ -1,0 +1,7 @@
+<h2>Startup Controller</h2>
+<p class="panel callout">Adds a reset button to reset watched property..</p>
+<form ng-submit="requestFunding()" ng-controller="StartupController">
+    Starting: <input ng-change="computeNeeded()" ng-model="funding.startingEstimate" />
+    Recommendation : {{needed}}
+    <button>Submit</button><a class="button "ng-click ="reset()">Reset</a>
+</form>

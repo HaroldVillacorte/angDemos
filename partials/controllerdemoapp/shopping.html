@@ -1,0 +1,7 @@
+<h2>Shopping Controller</h2>
+<p class="panel callout">Introduces factories and filters.</p>
+<div ng-controller="ShoppingController">
+    <ul>
+        <li ng-repeat="item in items">{{item.title}} | {{item.description}} - {{item.price| currency}}</li>
+    </ul>
+</div>

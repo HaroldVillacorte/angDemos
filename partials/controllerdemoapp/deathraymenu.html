@@ -1,0 +1,15 @@
+<h2>Deathray Menu Controller</h2>
+<p class="panel callout">Shows ng-show directive.</p>
+<div ng-controller='DeathrayMenuController'>
+    <style>
+        .menu-disabled-true {
+            color: gray;
+        }
+    </style>
+    <button ng-click='toggleMenu()'>Toggle Menu</button>
+    <ul ng-show='menuState.show'>
+        <li class="menu-disabled-{{isDisabled}}" ng-click="stun()">Stun</li>
+        <li class="menu-disabled-{{isDisabled}}" ng-click="disintegrate()">Disintegrate</li>
+        <li class="menu-disabled-{{isDisabled}}" ng-click="erase()">Erase from history</li>
+    </ul>
+</div>

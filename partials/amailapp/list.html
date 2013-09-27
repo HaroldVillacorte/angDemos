@@ -1,0 +1,19 @@
+<h2>Messages List</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Sender</th>
+            <th>Subject</th>
+            <th>Date</th>
+            <th>Recipients</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="message in messages">
+            <td>{{message.sender}}</td>
+            <td><a href="http://localhost:8383/angDemos/amailapp.html#/detail/{{message.id}}">{{message.subject}}</a></td>
+            <td>{{message.date}}</td>
+            <td><span ng-repeat="recipient in message.recipients">{{recipient}}</span></td>
+        </tr>
+    </tbody>
+</table>

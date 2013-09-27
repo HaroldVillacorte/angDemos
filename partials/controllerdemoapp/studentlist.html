@@ -1,0 +1,10 @@
+<h2>Student List Controller</h2>
+<p class="panel callout">Uses ng-click directive to splice array.</p>
+<div ng-controller="StudentListController">
+    <ul>
+        <li ng-repeat="student in students">
+            <a href="/student/view/{{student.id}}">{{student.name}}</a>
+        </li>
+    </ul>
+    <button ng-click="addTomThumb()">Add Tom Thumb</button>
+</div>

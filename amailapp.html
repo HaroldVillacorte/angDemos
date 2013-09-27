@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>AMail App Demo</title>
+    <link rel="stylesheet" href="lib/foundation-4.3.1/css/foundation.min.css">
+    <link rel="stylesheet" href="amailapp/css/app.css">
+    <script src="lib/foundation-4.3.1/js/vendor/custom.modernizr.js"></script>
+</head>
+<body ng-app="amailApp">
+
+    <nav class="top-bar" data-options="is_hover:false">
+        <ul class="title-area">
+            <li class="name">
+                <h1><a href="http://localhost:8383/angDemos/index.html">AngularJs Demos</a></h1>
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+        <section class="top-bar-section">
+            <ul class="left">
+                <li class="divider"></li>
+                <li><a href="http://localhost:8383/angDemos/controllerdemoapp.html">Controller Demo App</a></li>
+                <li class="divider"></li>
+                <li><a href="http://localhost:8383/angDemos/amailapp.html">AMail Demo App</a></li>
+                <li class="divider"></li>
+            </ul>
+        </section>
+    </nav>
+
+    <div class="row">
+        <div class="column">
+            <h1>AMail App Demo</h1>
+            <p class="panel callout">Introduces routing with parameters.</p>
+            <view ng-view id="ng-view"></view>
+        </div>
+    </div>
+
+    <script>
+        document.write('<script src=' +
+                ('__proto__' in {} ? 'lib/foundation-4.3.1/js/vendor/zepto' : 'lib/foundation-4.3.1/js/vendor/jquery') +
+                '.js><\/script>');
+    </script>
+    <script src="lib/foundation-4.3.1/js/foundation.min.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="amailapp/js/appInit.js"></script>
+    <script src="amailapp/js/functions.js"></script>
+    <script src="amailapp/js/controller.js"></script>
+    <script src="amailapp/js/config.js"></script>
+</body>
+</html>
