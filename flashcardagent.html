@@ -4,12 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>AngularJS Demos</title>
-    <link rel="stylesheet" href="lib/foundation-4.3.1/css/foundation.min.css">
-    <link rel="stylesheet" href="controllerdemoapp/css/app.css">
+    <title>Flashcard Agent</title>
+    <link rel="stylesheet" href="lib/foundation-4.3.1/css/foundation.min.css" />
+    <link rel="stylesheet" href="lib/foundation-4.3.1/css/foundation.min.css" />
+    <link rel="stylesheet" href="lib/foundation-4.3.1/foundation_icons_general_enclosed/stylesheets/general_enclosed_foundicons.css" />
+    <link rel="stylesheet" href="lib/foundation-4.3.1/foundation_icons_general_enclosed/stylesheets/general_enclosed_foundicons_ie7.css" />
+    <link rel="stylesheet" href="flashcardagent/css/app.css" />
     <script src="lib/foundation-4.3.1/js/vendor/custom.modernizr.js"></script>
 </head>
-<body ng-app="myApp">
+<body ng-app="flashcardAgent">
 
     <nav class="top-bar" data-options="is_hover:false">
         <ul class="title-area">
@@ -25,47 +28,40 @@
                 <li class="divider"></li>
                 <li><a href="http://localhost:8383/angDemos/amailapp.html">AMail Demo App</a></li>
                 <li class="divider"></li>
-                <li><a href="http://localhost:8383/angDemos/flashcardagent.html">Flashcard Agent App</a></li>
+                <li class="has-dropdown">
+                    <a href="#">Flashcard Agent App</a>
+                    <ul class="dropdown" ng-controller="NavController">
+                        <li ng-repeat="link in mainMenu">
+                            <a href="{{baseUrl + link.url}}">{{link.controller}}</a>
+                        </li>
+                    </ul>
+                </li>
                 <li class="divider"></li>
             </ul>
         </section>
     </nav>
 
     <div class="row">
-        <div class="columns large-3">
-            <h4>Route Menu</h4>
-            <ul class="side-nav" ng-controller="NavController">
-                <li>
-                    <ul class="dropdown">
-                        <span ng-repeat="route in routes">
-                            <li ng-class="{active: location==route.url}"><a href="{{baseUrl + route.url}}">{{route.controller}}</a></li>
-                            <li class="divider"></li>
-                        </span>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <div class="columns large-9">
-            <section class="panel">
-                <h1>AngularJS Controller Demos</h1>
-            </section>
+        <div class="columns">
             <view ng-view id="ng-view"></view>
         </div>
     </div>
 
     <script>
         document.write('<script src=' +
-                ('__proto__' in {} ? 'lib/foundation-4.3.1/js/vendor/zepto' : 'lib/foundation-4.3.1/js/vendor/jquery') +
-                '.js><\/script>');
+              ('__proto__' in {} ? 'lib/foundation-4.3.1/js/vendor/zepto' : 'lib/foundation-4.3.1/js/vendor/jquery') +
+              '.js><\/script>');
     </script>
     <script src="lib/foundation-4.3.1/js/foundation.min.js"></script>
     <script>
         $(document).foundation();
     </script>
     <script src="lib/angular/angular.min.js"></script>
-    <script src="controllerdemoapp/js/appInit.js"></script>
-    <script src="controllerdemoapp/js/functions.js"></script>
-    <script src="controllerdemoapp/js/controller.js"></script>
-    <script src="controllerdemoapp/js/config.js"></script>
+    <script src="flashcardagent/js/01_appInit.js"></script>
+    <script src="flashcardagent/js/02_routes.js"></script>
+    <script src="flashcardagent/js/03_services.js"></script>
+    <script src="flashcardagent/js/04_directive.js"></script>
+    <script src="flashcardagent/js/05_controller.js"></script>
+    <script src="flashcardagent/js/06_config.js"></script>
 </body>
 </html>
